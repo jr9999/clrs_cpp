@@ -1,0 +1,11 @@
+#include "AdjacencyMatrix.h"
+
+//use adjacency matrix to represent dense graphs
+
+AdjacencyMatrix::AdjacencyMatrix()
+{
+}
+
+AdjacencyMatrix::~AdjacencyMatrix()
+{
+}

@@ -1,0 +1,18 @@
+#ifdef ADJACENCY_MATRIX_H
+#defne ADJACENCY_MARTRIX_H
+
+#include <string>
+
+using namespace std;
+
+class AdjacencyMatrix
+{
+ public:
+
+  AdjacencyMatrix();
+  virtual AdjacencyMatrix();
+
+ private:
+};
+
+#endif ADJACENCY_MATRIX_H

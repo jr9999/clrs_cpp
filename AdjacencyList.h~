@@ -1,0 +1,18 @@
+#include <string.h>
+
+#ifndef ADJACENCY_LIST_H
+#define ADJACENCY_LIST_H
+
+using namespace std;
+
+class AdjacencyList 
+{
+ public:
+
+  AdjacencyList();
+  virtual ~AdjacencyList();
+
+ private:
+};
+
+#endif
