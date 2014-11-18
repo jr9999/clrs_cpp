@@ -2,6 +2,7 @@
 #define GRAPH_VERTEX_H
 
 #include <iostream>
+#include <deque>
 
 using namespace std;
 
@@ -20,9 +21,14 @@ class GraphVertex
   int getCost();
   void setCost(int cost);
 
+  //for traversal
+  GraphVertex* Next();
+
  private:
+
   GraphVertex* source;
-  GraphVertex* sink;
+  deque<GraphVertex*> sinks;
+
   int value;
   int cost;
 };

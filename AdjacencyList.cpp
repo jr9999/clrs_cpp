@@ -10,3 +10,9 @@ AdjacencyList::~AdjacencyList()
 {
 }
 
+void 
+AdjacencyList::AddStartNode(GraphVertex* startNode)
+{
+  GraphVertex* newStartNode = startNode;
+  mAdjArray.push_back(newStartNode);
+}

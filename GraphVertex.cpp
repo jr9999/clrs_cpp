@@ -3,7 +3,7 @@
 GraphVertex::GraphVertex()
 {
   source = NULL;
-  sink = NULL;
+  //sinks = NULL;
   value = 0;
   cost = 0;
 }
@@ -15,20 +15,23 @@ GraphVertex::~GraphVertex()
       delete source;
       source = NULL;
     }
-  if(sink)
+  if(sinks.size() > 0)
     {
-      delete sink;
-      sink = NULL;
+      for(deque<GraphVertex*>::iterator iter = sinks.begin(); iter != sinks.end(); iter++)
+	{
+	  if(*iter) 
+	    {
+	      delete *iter;
+	      *iter = NULL;
+	    }
+	}
     }
 }
 
 void
 GraphVertex::ConnectTo(GraphVertex *newSink)
 {
-  if(!this->sink || this->sink != newSink)
-    {
-      this->sink = newSink;
-    }
+  this->sinks.push_back(newSink);
 }
 
 int
@@ -53,4 +56,14 @@ void
 GraphVertex::setCost(int cost)
 {
   this->cost = cost;
+}
+
+GraphVertex*
+GraphVertex::Next()
+{
+  GraphVertex* next =  this->sinks.back();
+
+  this->sinks.pop_back();
+
+  return next;
 }

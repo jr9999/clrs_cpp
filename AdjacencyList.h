@@ -14,8 +14,10 @@ class AdjacencyList
   AdjacencyList();
   virtual ~AdjacencyList();
 
+  void AddStartNode(GraphVertex* startNode);
+
  private:
-  deque<GraphVertex> mAdjArray;
+  deque<GraphVertex*> mAdjArray;
 };
 
 #endif
