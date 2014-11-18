@@ -12,7 +12,19 @@ class GraphVertex
   GraphVertex();
   virtual ~GraphVertex();
 
+  void ConnectTo(GraphVertex* newSink);
+
+  int getValue();
+  void setValue(int value);
+
+  int getCost();
+  void setCost(int cost);
+
  private:
+  GraphVertex* source;
+  GraphVertex* sink;
+  int value;
+  int cost;
 };
 
 #endif
