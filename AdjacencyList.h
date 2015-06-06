@@ -16,6 +16,8 @@ class AdjacencyList
 
   void AddStartNode(GraphVertex* startNode);
 
+  void bfs();
+
  private:
   deque<GraphVertex*> mAdjArray;
 };

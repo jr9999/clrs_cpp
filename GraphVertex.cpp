@@ -58,6 +58,19 @@ GraphVertex::setCost(int cost)
   this->cost = cost;
 }
 
+bool
+GraphVertex::hasNext()
+{
+  if(this->sinks.size() > 0) 
+    {
+      return true;
+    }
+  else
+    {
+      return false;
+    }
+}
+
 GraphVertex*
 GraphVertex::Next()
 {

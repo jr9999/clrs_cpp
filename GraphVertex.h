@@ -24,6 +24,8 @@ class GraphVertex
   //for traversal
   GraphVertex* Next();
 
+  bool hasNext();
+
  private:
 
   GraphVertex* source;
