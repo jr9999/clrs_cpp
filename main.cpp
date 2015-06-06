@@ -1,11 +1,20 @@
 #include <iostream>
 #include "AdjacencyList.h"
 
+#include <thread>
+
 using namespace std;
 
+void hello() 
+{
+  std::cout << "hello world" << endl;
+}
 
 int main(int argc, char* argv[])
 {
+  std::thread t(hello);
+  t.join();
+
   cout << "proj2 bfs" << endl;
  
   AdjacencyList* pMyAdjacencyList = new AdjacencyList();
